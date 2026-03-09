@@ -1,0 +1,8 @@
+# Build output
+ChatAPP/build/
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xcodeproj/xcuserdata/
+.DS_Store

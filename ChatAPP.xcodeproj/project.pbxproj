@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB0000000000000000000001 /* ChatAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* ChatAPPApp.swift */; };
+		BB0000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000002 /* AppDelegate.swift */; };
+		BB0000000000000000000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* ContentView.swift */; };
+		BB0000000000000000000004 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000004 /* SetupView.swift */; };
+		BB0000000000000000000005 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000005 /* ChatView.swift */; };
+		BB0000000000000000000006 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000006 /* MessageBubble.swift */; };
+		BB0000000000000000000007 /* InputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000007 /* InputBar.swift */; };
+		BB0000000000000000000008 /* PastableTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000008 /* PastableTextEditor.swift */; };
+		BB0000000000000000000009 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000009 /* SettingsView.swift */; };
+		BB000000000000000000000A /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000A /* ConversationsView.swift */; };
+		BB000000000000000000000B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000B /* AppState.swift */; };
+		BB000000000000000000000C /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000C /* HotkeyManager.swift */; };
+		BB000000000000000000000D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000D /* Message.swift */; };
+		BB000000000000000000000E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000E /* Conversation.swift */; };
+		BB000000000000000000000F /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000000F /* AppSettings.swift */; };
+		BB0000000000000000000010 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000010 /* OpenAIService.swift */; };
+		BB0000000000000000000011 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000011 /* StorageService.swift */; };
+		BB0000000000000000000012 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000012 /* FileService.swift */; };
+		BB0000000000000000000013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000013 /* Assets.xcassets */; };
+		BB0000000000000000000016 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000016 /* MarkdownView.swift */; };
+		BB0000000000000000000017 /* FolderAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000017 /* FolderAccessManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA0000000000000000000001 /* ChatAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAPPApp.swift; sourceTree = "<group>"; };
+		AA0000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA0000000000000000000003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000004 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000005 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000006 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		AA0000000000000000000007 /* InputBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBar.swift; sourceTree = "<group>"; };
+		AA0000000000000000000008 /* PastableTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastableTextEditor.swift; sourceTree = "<group>"; };
+		AA0000000000000000000009 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AA000000000000000000000A /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
+		AA000000000000000000000B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		AA000000000000000000000C /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
+		AA000000000000000000000D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		AA000000000000000000000E /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		AA000000000000000000000F /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		AA0000000000000000000010 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000011 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000012 /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA0000000000000000000014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0000000000000000000015 /* ChatAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatAPP.entitlements; sourceTree = "<group>"; };
+		AA0000000000000000000016 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000017 /* FolderAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderAccessManager.swift; sourceTree = "<group>"; };
+		II0000000000000000000001 /* ChatAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE0000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC0000000000000000000001 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				CC0000000000000000000002 /* ChatAPP */,
+				CC0000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC0000000000000000000002 /* ChatAPP */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000001 /* ChatAPPApp.swift */,
+				AA0000000000000000000002 /* AppDelegate.swift */,
+				AA000000000000000000000B /* AppState.swift */,
+				AA000000000000000000000C /* HotkeyManager.swift */,
+				CC0000000000000000000004 /* Models */,
+				CC0000000000000000000005 /* Services */,
+				CC0000000000000000000006 /* Views */,
+				AA0000000000000000000013 /* Assets.xcassets */,
+				AA0000000000000000000014 /* Info.plist */,
+				AA0000000000000000000015 /* ChatAPP.entitlements */,
+			);
+			path = ChatAPP;
+			sourceTree = "<group>";
+		};
+		CC0000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				II0000000000000000000001 /* ChatAPP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC0000000000000000000004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA000000000000000000000D /* Message.swift */,
+				AA000000000000000000000E /* Conversation.swift */,
+				AA000000000000000000000F /* AppSettings.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CC0000000000000000000005 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000010 /* OpenAIService.swift */,
+				AA0000000000000000000011 /* StorageService.swift */,
+				AA0000000000000000000012 /* FileService.swift */,
+				AA0000000000000000000017 /* FolderAccessManager.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		CC0000000000000000000006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000003 /* ContentView.swift */,
+				AA0000000000000000000004 /* SetupView.swift */,
+				AA0000000000000000000005 /* ChatView.swift */,
+				AA0000000000000000000006 /* MessageBubble.swift */,
+				AA0000000000000000000007 /* InputBar.swift */,
+				AA0000000000000000000008 /* PastableTextEditor.swift */,
+				AA0000000000000000000009 /* SettingsView.swift */,
+				AA000000000000000000000A /* ConversationsView.swift */,
+				AA0000000000000000000016 /* MarkdownView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD0000000000000000000001 /* ChatAPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = GG0000000000000000000002 /* Build configuration list for PBXNativeTarget "ChatAPP" */;
+			buildPhases = (
+				EE0000000000000000000001 /* Sources */,
+				EE0000000000000000000002 /* Frameworks */,
+				EE0000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatAPP;
+			productName = ChatAPP;
+			productReference = II0000000000000000000001 /* ChatAPP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		HH0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					DD0000000000000000000001 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = GG0000000000000000000001 /* Build configuration list for PBXProject "ChatAPP" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC0000000000000000000001;
+			productRefGroup = CC0000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD0000000000000000000001 /* ChatAPP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE0000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB0000000000000000000013 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE0000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB0000000000000000000001 /* ChatAPPApp.swift in Sources */,
+				BB0000000000000000000002 /* AppDelegate.swift in Sources */,
+				BB0000000000000000000003 /* ContentView.swift in Sources */,
+				BB0000000000000000000004 /* SetupView.swift in Sources */,
+				BB0000000000000000000005 /* ChatView.swift in Sources */,
+				BB0000000000000000000006 /* MessageBubble.swift in Sources */,
+				BB0000000000000000000007 /* InputBar.swift in Sources */,
+				BB0000000000000000000008 /* PastableTextEditor.swift in Sources */,
+				BB0000000000000000000009 /* SettingsView.swift in Sources */,
+				BB000000000000000000000A /* ConversationsView.swift in Sources */,
+				BB000000000000000000000B /* AppState.swift in Sources */,
+				BB000000000000000000000C /* HotkeyManager.swift in Sources */,
+				BB000000000000000000000D /* Message.swift in Sources */,
+				BB000000000000000000000E /* Conversation.swift in Sources */,
+				BB000000000000000000000F /* AppSettings.swift in Sources */,
+				BB0000000000000000000010 /* OpenAIService.swift in Sources */,
+				BB0000000000000000000011 /* StorageService.swift in Sources */,
+				BB0000000000000000000012 /* FileService.swift in Sources */,
+				BB0000000000000000000016 /* MarkdownView.swift in Sources */,
+				BB0000000000000000000017 /* FolderAccessManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FF0000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLES = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF0000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLES = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FF0000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ChatAPP/ChatAPP.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ChatAPP/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chatapp.ChatAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FF0000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ChatAPP/ChatAPP.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ChatAPP/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chatapp.ChatAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		GG0000000000000000000001 /* Build configuration list for PBXProject "ChatAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF0000000000000000000001 /* Debug */,
+				FF0000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		GG0000000000000000000002 /* Build configuration list for PBXNativeTarget "ChatAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF0000000000000000000003 /* Debug */,
+				FF0000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = HH0000000000000000000001 /* Project object */;
+}
