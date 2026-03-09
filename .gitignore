@@ -9,3 +9,6 @@ xcuserdata/
 
 # Claude Code
 .claude/
+
+# App bundle (distribute via Releases)
+ChatAPP.app/
