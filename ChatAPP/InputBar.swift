@@ -37,6 +37,11 @@ struct InputBar: View {
                     if let att = FileService.shared.processImageData(data) {
                         attachments.append(att)
                     }
+                },
+                onFilePaste: { url in
+                    if let att = FileService.shared.processFile(url: url) {
+                        attachments.append(att)
+                    }
                 }
             )
             .frame(minHeight: 36, maxHeight: 120)
@@ -84,6 +89,17 @@ struct InputBar: View {
             isDragging ? RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.accentColor, lineWidth: 2).padding(4) : nil
         )
+        .onReceive(NotificationCenter.default.publisher(for: .chatAppPasteImage)) { note in
+            if let data = note.userInfo?["data"] as? Data,
+               let att  = FileService.shared.processImageData(data) {
+                attachments.append(att)
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .chatAppPasteFiles)) { note in
+            if let urls = note.userInfo?["urls"] as? [URL] {
+                attachments.append(contentsOf: urls.compactMap { FileService.shared.processFile(url: $0) })
+            }
+        }
     }
 
     // MARK: - Folder badge

@@ -10,6 +10,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var chatWindow: ChatWindow!
     private var hotkeyManager: HotkeyManager?
     private var cancellables = Set<AnyCancellable>()
+    private var pasteMonitor: Any?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
@@ -18,6 +19,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         appState.loadData()
         setupHotkey()           // after loadData so saved hotkey is available
         observeHotkeyChanges()
+        setupPasteMonitor()
     }
 
     // MARK: - Status bar
@@ -91,6 +93,41 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             .store(in: &cancellables)
     }
 
+    // MARK: - Global paste monitor (handles Cmd+V regardless of first responder)
+
+    private func setupPasteMonitor() {
+        pasteMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { [weak self] event in
+            guard let self,
+                  event.modifierFlags.intersection(.deviceIndependentFlagsMask) == .command,
+                  event.charactersIgnoringModifiers == "v",
+                  self.chatWindow.isVisible else { return event }
+
+            let pb = NSPasteboard.general
+
+            // Images (public.png / public.tiff both present after Cmd+Ctrl+Shift+4)
+            for type in [NSPasteboard.PasteboardType.png, .tiff] {
+                if let data = pb.data(forType: type),
+                   let img  = NSImage(data: data),
+                   let png  = img.pngData() {
+                    NotificationCenter.default.post(
+                        name: .chatAppPasteImage, object: nil, userInfo: ["data": png])
+                    return nil   // consume — don't pass to responder chain
+                }
+            }
+
+            // Files copied in Finder
+            if let urls = pb.readObjects(forClasses: [NSURL.self],
+                                         options: [.urlReadingFileURLsOnly: true]) as? [URL],
+               !urls.isEmpty {
+                NotificationCenter.default.post(
+                    name: .chatAppPasteFiles, object: nil, userInfo: ["urls": urls])
+                return nil
+            }
+
+            return event   // plain text — let normal paste handle it
+        }
+    }
+
     // MARK: - Toggle
 
     @objc func toggleWindow() {
@@ -113,6 +150,13 @@ extension AppDelegate: NSWindowDelegate {
         sender.orderOut(nil)
         return false
     }
+}
+
+// MARK: - Notification names
+
+extension Notification.Name {
+    static let chatAppPasteImage = Notification.Name("chatAppPasteImage")
+    static let chatAppPasteFiles = Notification.Name("chatAppPasteFiles")
 }
 
 // MARK: - Custom window

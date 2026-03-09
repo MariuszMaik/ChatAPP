@@ -25,7 +25,8 @@ private enum MBlock: Identifiable {
 
 // MARK: - Main view
 
-struct MarkdownView: View {
+struct MarkdownView: View, Equatable {
+    static func == (lhs: MarkdownView, rhs: MarkdownView) -> Bool { lhs.text == rhs.text }
     let text: String
 
     var body: some View {

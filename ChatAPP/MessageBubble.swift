@@ -4,6 +4,7 @@ import SwiftUI
 struct MessageBubble: View {
     let message: Message
     @State private var copied = false
+    @State private var streamingText = ""  // rate-limited copy of content for MarkdownView
 
     var isUser: Bool { message.role == .user }
 
@@ -116,8 +117,19 @@ struct MessageBubble: View {
                             }
                             .padding(.horizontal, 12).padding(.vertical, 8)
                         } else {
-                            MarkdownView(text: message.content + (message.isStreaming ? "▋" : ""))
+                            // MarkdownView is equatable — only re-renders when streamingText changes.
+                            // During streaming, streamingText updates via a 100ms timer (~10fps)
+                            // so markdown is live but rendering isn't triggered on every token.
+                            MarkdownView(text: message.isStreaming ? streamingText + "▋" : message.content)
+                                .equatable()
                                 .padding(.horizontal, 12).padding(.vertical, 8)
+                                .onAppear { streamingText = message.content }
+                                .onChange(of: message.isStreaming) { _ in streamingText = message.content }
+                                .onReceive(
+                                    Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+                                ) { _ in
+                                    if message.isStreaming { streamingText = message.content }
+                                }
                         }
                     }
                     .background(Color(NSColor.controlBackgroundColor))
