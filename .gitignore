@@ -6,3 +6,6 @@ ChatAPP/build/
 xcuserdata/
 *.xcodeproj/xcuserdata/
 .DS_Store
+
+# Claude Code
+.claude/
