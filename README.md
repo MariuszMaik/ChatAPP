@@ -11,6 +11,14 @@ macOS menu bar chat app with OpenAI-compatible API support.
 - Conversation history
 - API key stored in Keychain, chat history AES-256-GCM encrypted
 
+## Download
+
+Download the latest `ChatAPP-v1.0.zip` from [Releases](https://github.com/MariuszMaik/ChatAPP/releases), unzip, and run. Since the app is not notarized, macOS will block it on first launch. To fix, run once in Terminal:
+
+```bash
+xattr -dr com.apple.quarantine ChatAPP.app
+```
+
 ## Build
 
 Requires macOS 13+ and Xcode Command Line Tools (`xcode-select --install`).
