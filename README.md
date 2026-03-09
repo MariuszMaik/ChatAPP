@@ -13,7 +13,7 @@ macOS menu bar chat app with OpenAI-compatible API support.
 
 ## Download
 
-Download the latest `ChatAPP-v1.0.zip` from [Releases](https://github.com/MariuszMaik/ChatAPP/releases), unzip, and run. Since the app is not notarized, macOS will block it on first launch. To fix, run once in Terminal:
+Download the latest `ChatAPP-v1.1.zip` from [Releases](https://github.com/MariuszMaik/ChatAPP/releases), unzip, and run. Since the app is not notarized, macOS will block it on first launch. To fix, run once in Terminal:
 
 ```bash
 xattr -dr com.apple.quarantine ChatAPP.app
